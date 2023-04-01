@@ -6,8 +6,8 @@
     "background_color": "#1E448A",
     "display": "standalone",
     "orientation": "any",
-    "scope": "/site",
-    "id": "/site",
+    "scope": "/site2",
+    "id": "/site2",
     "start_url": ".",
     "prefer_related_applications": false,
     "icons": [
