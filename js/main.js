@@ -5,7 +5,6 @@ $(document).ready(function () {
         $('.header-sub-menu__list, .header-sub-sub-menu__list').removeClass('open');
         $('.header__burger, .header-menu, .logo, .logo__link').toggleClass('active');
         $('body').toggleClass('lock');
-        document.getElementById("logo__link").setAttribute('href', 'https://drive.google.com/drive/folders/1jCa0I_LPhQG-qI8pH4kPLxY4MVwvnFrI?usp=share_link');
     });
 });
 $(document).ready(function () {

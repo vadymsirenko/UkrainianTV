@@ -1,5 +1,5 @@
-const staticCacheName = 'static-cache-v0';
-const dynamicCacheName = 'dynamic-cache-v0';
+const staticCacheName = 'static-cache-v1';
+const dynamicCacheName = 'dynamic-cache-v1';
 
 const staticAssets = [
     './',
@@ -26,7 +26,7 @@ const staticAssets = [
     './ico/Ukraine.ico',
     './ico/unlock.png',
     './img/Tryzub-svg.png',
-    //'./img/no-image.jpg',
+    './img/no-image.png',
     './js/app.js',
     './js/jquery.fancybox.min.js',
     './js/main.js',
