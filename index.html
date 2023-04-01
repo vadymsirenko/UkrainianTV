@@ -1,81 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="uk">
 
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1E448A">
+    <meta name="apple-mobile-web-app-status-bar" content="#1E448A">
+    <meta name="description" content="Ukrainian TV це веб-додаток, який об’єднує YouTube-канали українських новин в одному місці. 
+    Ukrainian TV is a web application that combines YouTube channels of Ukrainian news in one place">
 
-    <title>Fairy Forest</title>
-    <link rel="manifest" href="/manifest.webmanifest">
-    <link rel="icon" href="img/apple-touch-icon.png" sizes="any">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <title>Ukrainian TV ver.2</title>
+    <link rel="stylesheet" href="./css/jquery.fancybox.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./ico/Ukraine.ico">
+    <link rel="icon" href="./ico/apple-touch-icon.png" sizes="any">
+    <link rel="apple-touch-icon" href="./ico/apple-touch-icon.png">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="48x48" href="./ico/apple-touch-icon-48x48.png">
+    <link rel="apple-touch-icon" sizes="64x64" href="./ico/apple-touch-icon-64x64.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="./ico/apple-touch-icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="./ico/apple-touch-icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x153" href="./ico/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="./ico/apple-touch-icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="./ico/apple-touch-icon-256x256.png">
+    <link rel="apple-touch-icon" sizes="310x310" href="./ico/apple-touch-icon-310x310.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="./ico/apple-touch-icon-512x512.png">
 
-    <!-- <script src="libs/gsap/gsap.min.js" defer></script>
-    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
-    <script src="libs/gsap/ScrollSmoother.min.js" defer></script> -->
-
-    <script src="js/app.js" defer></script>
-
+    <link rel="manifest" href="./manifest.webmanifest.json">
 </head>
+
 <body>
-
     <div class="wrapper">
-        <div class="content">
-
-            <header class="main-header">
-                <div class="layers">
-                    <div class="layer__header">
-                        <div class="layers__caption">Welcome to Parallax</div>
-                        <div class="layers__title">Fairy Forest</div>
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="logo">
+                        <a class="logo__link" id="logo__link" href="#">Drive</a>
                     </div>
-                    <div class="layer layers__base" style="background-image: url(img/layer-base.png);"></div>
-                    <div class="layer layers__middle" style="background-image: url(img/layer-middle.png);"></div>
-                    <div class="layer layers__front" style="background-image: url(img/layer-front.png);"></div>
-                </div>
-            </header>
-        
-            <article class="main-article" style="background-image: url(img/dungeon.jpg);">
-                <div class="main-article__content">
-                    <h2 class="main-article__header">To be continued</h2>
-                    <p class="main-article__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quisquam autem voluptas recusandae rerum, consequatur esse repellat deleniti, dolore reprehenderit labore animi vero pariatur? Sapiente necessitatibus porro eligendi alias voluptatum voluptatibus quod?</p>
-                </div>
-                <div class="copy">© WebDesign Master</div>
-            </article>
+                    <img class="coat" src="./img/Tryzub-svg.png" alt="Tryzub">
+                    <div class="new">
+                        <p class="version">new</p>
+                    </div>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                    <nav class="header-menu">
+                        <div class="container">
+                            <ul class="header-menu__list">
+                                <li class="header-menu__item">
+                                    <a class="header-menu__link" href="#"><img class="touch-img" src="ico/touch.png"
+                                            alt="touch">Portfolio</a>
+                                    <span class="menu__arrow arrow"></span>
+                                    <ul class="header-sub-menu__list">
+                                        <li>
+                                            <a class="header-sub-menu__link" href="#"><img class="touch-img"
+                                                    src="ico/touch.png" alt="touch">Landing page</a>
+                                            <span class="sub-menu__arrow arrow"></span>
+                                            <ul class="header-sub-sub-menu__list">
+                                                <li>
+                                                    <a class="header-sub-sub-menu__link menu_touch"
+                                                        href="my_projects/xiaomi/index.html">Xiaomi C26</a>
+                                                </li>
+                                                <li>
+                                                    <a class="header-sub-sub-menu__link menu_touch"
+                                                        href="my_projects/car_sharing/index.html">Car sharing</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="header-sub-menu__link" href="#">Ecommerce</a>
+                                        </li>
+                                        <li>
+                                            <a class="header-sub-menu__link" href="#">Business</a>
+                                        </li>
+                                        <li>
+                                            <a class="header-sub-menu__link" href="#"><img class="touch-img"
+                                                    src="ico/touch.png" alt="touch">different</a>
+                                            <span class="sub-menu__arrow arrow"></span>
+                                            <ul class="header-sub-sub-menu__list">
+                                                <li>
+                                                    <a class="header-sub-sub-menu__link menu_touch"
+                                                        href="my_projects/fairy_forest/index.html">Fairy Forest</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header-menu__item"> <a class="header-menu__link" href="#"><img
+                                            class="touch-img" src="ico/touch.png" alt="touch">English</a>
+                                    <span class="menu__arrow arrow"></span>
+                                    <ul class="header-sub-menu__list">
+                                        <li>
+                                            <a class="header-sub-menu__link" href="#"><img class="touch-img"
+                                                    src="ico/touch.png" alt="touch">Lessons</a>
+                                            <span class="sub-menu__arrow arrow"></span>
+                                            <ul class="header-sub-sub-menu__list">
+                                                <li>
+                                                    <a class="header-sub-sub-menu__link menu_touch" data-fancybox
+                                                        href="https://youtu.be/pssVcLQ1k_s">ABC L. English</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="header-sub-menu__link" href="#"><img class="touch-img"
+                                                    src="ico/touch.png" alt="touch">Bebris</a>
+                                            <span class="sub-menu__arrow arrow"></span>
+                                            <ul class="header-sub-sub-menu__list">
+                                                <li>
+                                                    <a class="header-sub-sub-menu__link menu_touch" data-fancybox
+                                                        href="https://youtu.be/8kNpGRW_0BE">A0</a>
+                                                </li>
+                                                <li>
+                                                    <a class="header-sub-sub-menu__link menu_touch" data-fancybox
+                                                        href="https://youtu.be/QM77I0SE9cg">A1</a>
+                                                </li>
+                                                <li>
+                                                    <a class="header-sub-sub-menu__link menu_touch" data-fancybox
+                                                        href="https://youtu.be/PbEfaBrLIc0">A2</a>
+                                                </li>
+                                                <li>
+                                                    <a class="header-sub-sub-menu__link menu_touch" data-fancybox
+                                                        href="https://youtu.be/jbfhjAy8Q3Q">B1</a>
+                                                </li>
+                                                <li>
+                                                    <a class="header-sub-sub-menu__link menu_touch" data-fancybox
+                                                        href="https://youtu.be/ERtEnkZPwtg">B2</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
 
+                                <li class="header-menu__item"> <a class="header-menu__link"
+                                        href="u-tv__ver1.html">Ukrainian
+                                        TV ver.1</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <video autoplay muted loop preload="auto" class="full-screen__video">
+                <source type="video/mp4" src="video/prapor_ua.mp4">
+                <track src="#" kind="captions" srclang="uk" label="Ukrainian_weve_flag">
+            </video>
+            <div class="container">
+                <div class="main__inner">
+                    <ul class="menu__list-one">
+                        <li class="tv__item"><a class="tv__link" id="btn001" data-fancybox
+                                href="https://www.youtube.com/embed/6LzcbC02wJI">Espreso.TV</a></li>
+                        <li class="tv__item"><a class="tv__link" id="btn002" data-fancybox
+                                href="https://www.youtube.com/embed/JpTL53Su4U8">Прямий</a></li>
+                        <li class="tv__item"><a class="tv__link" id="btn003" data-fancybox
+                                href="https://www.youtube.com/embed/UJOF8cu3Iv8">5 канал</a></li>
+                        <li class="tv__item"><a class="tv__link" id="btn004" data-fancybox
+                                href="https://www.youtube.com/embed/hns12gYNRq0">24 Канал</a></li>
+                    </ul>
+                    <ul class="menu__list-two">
+                        <li class="tv__item"><a class="tv__link" id="btn005" data-fancybox
+                                href="https://www.youtube.com/embed/R5vvrb1YsqU">Ua перший</a></li>
+                        <li class="tv__item"><a class="tv__link" id="btn006" data-fancybox
+                                href="https://youtube.com/embed/T88RnpKNN_s">Факти ICTV</a>
+                        </li>
+                        <li class="tv__item"><a class="tv__link" id="btn007" data-fancybox
+                                href="https://www.youtube.com/embed/ASndlvhI8p0">Телеканал 1+1</a></li>
+                        <li class="tv__item"><a class="tv__link" id="btn008" data-fancybox
+                                href="https://www.youtube.com/embed/zb4GQjDgs4g">ТСН</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <nav class="footer-menu">
+                        <ul class="footer-menu__list">
+                            <li class="footer-menu__item"> <a class="footer__button" href="#">Portfolio</a> </li>
+                            <li class="footer-menu__item"> <a class="footer__button" href="#">© Vadym Sirenko</a> </li>
+                            <li class="footer-menu__item"> <a class="footer__button" href="#">2023 r.</a> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </footer>
     </div>
-    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/main.js"></script>
 </body>
-<!-- <body>
 
-	<div class="wrapper">
-		<div class="content">
-
-			<header class="main-header">
-				<div class="layers">
-					<div class="layer__header">
-						<div class="layers__caption">Welcome to Parallax</div>
-						<div class="layers__title">Fairy Forest</div>
-					</div>
-					<div class="layer layers__base" style="background-image: url(img/layer-base.png);"></div>
-					<div class="layer layers__middle" style="background-image: url(img/layer-middle.png);"></div>
-					<div class="layer layers__front" style="background-image: url(img/layer-front.png);"></div>
-				</div>
-			</header>
-		
-			<article class="main-article" style="background-image: url(img/dungeon.jpg);">
-				<div class="main-article__content">
-					<h2 class="main-article__header">To be continued</h2>
-					<p class="main-article__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis error provident dignissimos facere. Repellendus tempore autem qui! Quia magnam tempora esse id necessitatibus corrupti mollitia expedita sapiente cum rerum, ut dicta laboriosam!</p>
-				</div>
-				<div class="copy">© WebDesign Master</div>
-			</article>
-
-		</div>
-	</div>
-
-</body> -->
 </html>

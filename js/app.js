@@ -1,11 +1,13 @@
-window.addEventListener('scroll', e =>{
+window.addEventListener('load', () => {
 
-    document.body.style.cssText = `--scrollTop: ${this.scrollY}px`
-    // document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`)
-})
+    if ('serviceWorker' in navigator){
 
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-// ScrollSmoother.create({
-//     wrapper: '.wrapper',
-//     content: '.content'
-// })
+        navigator.serviceWorker.register('./serviceworker.js')
+            .then(registration => {
+                console.log('Service worker successfully registered', registration);
+            })
+            .catch(error => {
+                console.log('Service worker registration failed', error);
+            });
+    }
+});
