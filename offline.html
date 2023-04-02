@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1E448A">
+    <meta name="apple-mobile-web-app-status-bar" content="#1E448A">
+    <meta name="description" content="Ukrainian TV це веб-додаток, який об’єднує YouTube-канали українських новин в одному місці. 
+    Ukrainian TV is a web application that combines YouTube channels of Ukrainian news in one place">
+
+    <title>Ukrainian TV ver.PWA #1</title>
+    <link rel="stylesheet" href="./css/jquery.fancybox.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./ico/Ukraine.ico">
+    <link rel="icon" href="./ico/apple-touch-icon.png" sizes="any">
+    <link rel="apple-touch-icon" href="./ico/apple-touch-icon.png">
+
+    <link rel="apple-touch-icon" sizes="48x48" href="./ico/apple-touch-icon-48x48.png">
+    <link rel="apple-touch-icon" sizes="64x64" href="./ico/apple-touch-icon-64x64.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="./ico/apple-touch-icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="./ico/apple-touch-icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x153" href="./ico/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="./ico/apple-touch-icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="./ico/apple-touch-icon-256x256.png">
+    <link rel="apple-touch-icon" sizes="310x310" href="./ico/apple-touch-icon-310x310.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="./ico/apple-touch-icon-512x512.png">
+
+    <link rel="manifest" href="./manifest.webmanifest.json">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="logo">
+                        <a class="logo__link" id="logo__link" href="#"></a>
+                    </div>
+                    <img class="coat" src="./img/Tryzub-svg.png" alt="Tryzub">
+                    <div class="new">
+                        <p class="version">new</p>
+                    </div>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <video autoplay muted loop preload="auto" class="full-screen__video">
+                <source type="video/mp4" src="video/prapor_ua.mp4">
+                <track src="#" kind="captions" srclang="uk" label="Ukrainian_weve_flag">
+            </video>
+            <div class="container">
+                <div class="main__inner">
+                    
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <nav class="footer-menu">
+                        <ul class="footer-menu__list">
+                            <li class="footer-menu__item"> <a class="footer__button" href="#">© Vadym Sirenko</a> </li>
+                            <li class="footer-menu__item"> <a class="footer__button" href="#">2023 r.</a> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
