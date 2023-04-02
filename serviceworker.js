@@ -1,5 +1,5 @@
-const staticCacheName = 'static-cache-v2';
-const dynamicCacheName = 'dynamic-cache-v2';
+const staticCacheName = 'static-cache-v1';
+const dynamicCacheName = 'dynamic-cache-v1';
 
 const staticAssets = [
     './',
@@ -30,7 +30,7 @@ const staticAssets = [
     './js/app.js',
     './js/jquery.fancybox.min.js',
     './js/main.js',
-    './video/prapor_ua.mp4'
+    // './video/prapor_ua.mp4'
 ];
 
 self.addEventListener('install', async event => {
