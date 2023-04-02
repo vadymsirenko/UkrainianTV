@@ -50,7 +50,7 @@ self.addEventListener('activate', async event => {
     console.log('Service worker has been activated');
 });
 
-self.addEventListener('fetch', async event => {
+self.addEventListener('fetch', event => {
     console.log(`Trying to fetch ${event.request.url}`);
     event.respondWith(checkCache(event.request));
 });
@@ -77,3 +77,34 @@ async function checkOnline(req) {
         }
     }
 }
+
+addEventListener('message', ev => {
+    if (ev.data === 'skipWaiting') return skipWaiting();
+});
+
+// вызов модального окна
+const askUserToUpdate = reg => {
+    return Modal.confirm({
+        onOk: async () => {
+            // вешаем обработчик изменения состояния
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                window.location.reload();
+            });
+
+            // пропускаем ожидание 
+            if (reg && reg.waiting) {
+                reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+            }
+        },
+
+        onCancel: () => {
+            Modal.destroyAll();
+        },
+        icon: null,
+        title: 'Хорошие новости! ? ',
+        content:
+            'Мы только что обновили версию приложения! Чтобы получить обновления, нажмите на кнопку ниже (страница перезагрузится)',
+        cancelText: 'Не обновлять',
+        okText: 'Обновить'
+    });
+};
